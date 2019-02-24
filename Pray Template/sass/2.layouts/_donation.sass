@@ -1,0 +1,31 @@
+#donation
+  +background(black-overlay, home-bg)
+  color: $white
+
+  .container
+    background: rgba($white, 0.2)
+    border-radius: 5px
+    padding: 3rem 2rem
+
+  .donation-head
+    font-weight: 700
+    text-align: center
+    margin-bottom: 2rem
+
+  .form-control
+    background: transparent
+    color: $white
+    &::placeholder
+      color: $gray-3
+      text-transform: uppercase
+    &:focus
+      background: rgba($white, 0.1)
+      color: $white
+
+  .btn
+    margin-top: 1.5rem
+    position: relative
+    left: 50%
+    +transform(translateX(-50%))
+    &:hover
+      border-color: $white

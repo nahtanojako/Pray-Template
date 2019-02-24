@@ -1,0 +1,38 @@
+#volunteer
+  .card
+    background: $gray
+    margin-top: 2rem
+    &__footer
+      +flex(row, space-between, center)
+      padding: 1rem
+      .card-head
+        margin: 0
+
+    &__body
+      padding: 3rem 1.5rem
+      text-align: center
+      img
+        +circle(6rem)
+        margin-bottom: 1rem
+      blockquote
+        font-style: italic
+        color: $gray-7
+
+      .name
+        text-transform: uppercase
+        font-weight: 700
+        display: block
+        line-height: 1
+        font-size: 1.1rem
+
+      .pos
+        color: $gray-5
+        font-size: 0.9rem
+      
+  .test
+    margin-top: 3rem
+    +bp(lg)
+      margin-top: 0
+
+  .prev-next
+    padding-left: 0

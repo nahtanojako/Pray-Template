@@ -1,0 +1,188 @@
+.top-header
+  background: $secondary
+  color: $gray-3
+  padding: 0.5rem 0
+
+  .row
+    +bp(md)
+      align-items: center
+
+  .contact-info
+    margin-bottom: 0.5rem
+    +flex(row, space-between, center)
+    +bp(md)
+      display: inline-block
+      margin-bottom: 0
+
+    &__item
+      color: $gray-5
+      font-size: 0.8rem
+
+      &:first-child
+        +bp(md)
+          margin-right: 1rem
+      & i
+        color: $gray-3
+        margin-right: 0.5rem
+
+  .search-input
+    width: 100%
+    position: relative
+
+    [type='text']
+      width: 100%
+      background: $gray-7
+      color: $white
+      &:focus
+        outline: none
+        border-color: $primary
+      &::placeholder
+        color: $gray-3
+
+    .icon-wrap
+      +center(y)
+      right: 0.2rem
+      background: $gray-7
+      width: 10%
+      height: 2rem
+      cursor: pointer
+      i
+        +center
+
+
+.main-header
+  padding: 0.7rem 0
+  &.fixed
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: $top
+    background: $white
+    box-shadow: 0 3px 5px rgba($black, 0.2)
+
+  .row
+    align-items: center
+
+  nav
+    +flex(row, space-between, center)
+    
+    .btn
+      +bp(lg)
+        padding: 0.5rem 1rem
+        order: 2
+
+    .nav-collapse
+      position: fixed
+      top: 0
+      right: 0
+      width: 60%
+      height: 100vh
+      background: lighten($secondary, 5%)
+      padding-top: 5rem
+      +transform(translateX(100%))
+      +transition(fast)
+      z-index: $top
+      &.show
+        +transform(translateX(0))
+      +bp(lg)
+        display: block
+        position: static
+        order: -1
+        +flex(row, center, center)
+        width: 80%
+        height: auto
+        +transform(translateX(0))
+        padding-top: 0
+        background: none
+
+      li
+        a
+          text-transform: uppercase
+          display: block
+          padding: 0.7rem 1rem
+          color: $gray-5
+          border-left: 0.5rem solid transparent
+          text-align: center
+          +bp(lg)
+            border-left: 2px solid $gray-5
+            padding: 0 1rem
+            line-height: 0.9
+          &:hover
+            border-left-color: $primary
+            color: $white
+            background: lighten($secondary, 6%)
+            +bp(lg)
+              background: none
+              color: $secondary
+              border-color: $gray-5
+
+        &.active a
+          border-left-color: $primary
+          color: $white
+          background: lighten($secondary, 10%)
+          +bp(lg)
+            background: none
+            color: $secondary
+            font-weight: 700
+            border-left-color: $gray-5
+            
+        &:last-child a
+          display: inline-block
+          color: $white
+          border: none
+          margin-top: 3rem
+          padding-left: 1.5rem
+          padding-right: 1.5rem
+          +center(x)
+          &:hover
+            color: $primary
+
+        &:nth-child(2) a
+          +bp(lg)
+            border-left: none
+
+        &:last-child,
+        &:first-child
+          +bp(lg)
+            display: none
+
+      li#btn-close
+        width: 2rem
+        height: 1.8rem
+        position: absolute
+        top: 1.5rem
+        right: 1.5rem
+        cursor: pointer
+        &:before,
+        &:after
+          +pseudo
+          width: 100%
+          height: 4px
+          border-radius: 4px
+          background: $gray-3
+          margin-top: 0.8rem
+
+        &:before
+          +transform(rotate(45deg))
+      
+        &:after
+          +transform(rotate(-45deg))
+
+    .nav-toggler
+      width: 2.2rem
+      height: 1.2rem
+      cursor: pointer
+      +bp(lg)
+        display: none
+
+      .nav-toggler__icon
+        width: 100%
+        height: 4px
+        border-radius: 4px
+        background: $gray-7
+        box-shadow: 0 8px 0 $gray-7, 0 16px 0 $gray-7
+
+
+
+

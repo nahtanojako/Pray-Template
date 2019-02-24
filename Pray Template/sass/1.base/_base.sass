@@ -1,0 +1,80 @@
+*
+  box-sizing: border-box
+
+*:before,
+*:after
+  box-sizing: inherit
+
+html, body
+  width: 100%
+  height: 100%
+
+body
+  font-family: $sans-serif
+  font-size: 1rem
+  line-height: 1.6
+
+a
+  text-decoration: none
+  +transition(fast)
+
+img,
+video
+  width: 100%
+  vertical-align: middle
+
+
+
+h1,h2,h3,h4,h5,h6,a
+  text-transform: uppercase
+
+.section
+  padding: 3rem 0
+
+.section-head
+  font-weight: 700
+  letter-spacing: 2px
+  margin: 2rem 0
+  font-size: 1.5rem
+
+.section-head-wrap
+  +flex(row, space-between, center)
+  background: $gray
+  .section-head-primary
+    @extend .section-head
+    color: $primary
+    margin: 0
+    border-left: 0.5rem solid $primary
+    padding: 1rem 1.5rem
+    
+.prev-next
+    padding: 0 1.5rem
+    span
+      padding: 0 0.5rem
+      color: $gray-5
+      font-size: 1.5rem
+      line-height: 0.5
+    .prev
+      border-right: 2px solid $gray-5
+
+    .prev, .next
+      cursor: pointer
+      +transition(fast)
+      &:hover
+        font-size: 1.7rem
+        color: $gray-7
+
+.logo
+    color: $primary
+    font-weight: 700
+    position: relative
+    padding-left: 2.3rem
+    &:before
+      +pseudo
+      left: 0
+      display: inline-block
+      margin-right: 3rem
+      width: 2rem
+      height: 3rem
+      border: 2px solid $primary
+

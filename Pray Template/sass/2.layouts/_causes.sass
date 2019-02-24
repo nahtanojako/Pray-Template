@@ -1,0 +1,106 @@
+#causes
+  
+  .section-head-wrap
+    +bp(md)
+      margin-left: -1rem
+      margin-right: -1rem
+
+  .row
+    margin-top: 2rem
+
+  .card
+    margin-bottom: 2rem
+    &__img
+      +background(none, home-bg)
+      height: 250px
+      position: relative
+
+    &__counter
+      position: absolute
+      bottom: 1rem
+      left: 0
+      width: 100%
+      height: 5px
+      background: $white
+      &__gauge
+        position: absolute
+        top: 0
+        left: 0
+        background: $primary
+        width: 8.3%
+        height: 5px
+
+      &__text
+        +center(x)
+        bottom: -0.5rem
+        background: $primary
+        color: $white
+        padding: 0 0.5rem
+
+    &__body
+      padding: 2rem
+      background: $gray
+      border: 1px solid $gray-5
+      border-bottom: none
+      +bp(md)
+        padding: 1rem
+      +bp(xl)
+        padding: 2rem
+
+      &__sub
+        +flex(row, space-between, center)
+        text-align: center
+        background: $gray
+
+      &__sub-item
+        padding: 0.7rem
+        border: 1px solid $gray-5
+        flex-basis: 50%
+        &:last-child
+          border-left: none
+        p
+          text-transform: uppercase
+          margin: 0
+        .amount
+          font-weight: 700
+          font-size: 1.5rem
+          color: $gray-7
+
+    &__footer
+      .btn
+        border-radius: 0
+        display: block
+        text-align: center
+        &:hover
+          background: $secondary
+          border-color: $secondary
+          color: $white
+
+    &__head
+      font-weight: 700
+      color: $gray-9
+      font-size: 1.1rem
+      +bp(xl)
+        font-size: 1.25rem
+
+    &__desc
+      color: $gray-7
+
+
+  .col-md-4:nth-child(2),
+  .col-md-4:nth-child(3)
+    .card .card__counter__gauge
+      width: 0
+
++bp(md)
+  .col-md-4:first-child
+    padding-left: 0
+    padding-right: 0.75rem
+
+  .col-md-4:nth-child(2)
+    padding: 0 0.25rem
+
+  .col-md-4:last-child
+    padding-right: 0
+    padding-left: 0.75rem
+

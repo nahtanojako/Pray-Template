@@ -1,0 +1,51 @@
+#news
+
+  .card
+    margin-top: 2rem
+    &__img
+      +background(none, home-bg)
+      height: 250px
+      position: relative
+
+    &__date
+      position: absolute
+      top: 0
+      left: 1rem
+      background: $primary
+      padding: 0.7rem 1rem 0.5rem
+      span
+        display: block
+        color: $white
+        line-height: 1
+      .day
+        font-size: 2rem
+        font-weight: 700
+      .month
+        text-transform: uppercase
+        letter-spacing: 2px
+
+    &__body
+      padding: 2rem
+      border: 1px solid $gray-5
+      .card__head
+        font-weight: 700
+        letter-spacing: 1px
+        color: $gray-7
+      .card__desc
+        color: $gray-6
+        margin-bottom: 2rem
+      .link-decor
+        color: $gray-6
+        text-align: center
+        border-bottom: 1px solid $gray-5
+        font-size: 0.9rem
+        font-weight: 700
+        position: absolute
+        right: 3rem
+        bottom: 2rem
+        &:hover
+          border-color: transparent
+          color: $gray-9
+
+
+      

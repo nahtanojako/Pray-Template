@@ -1,0 +1,25 @@
+footer
+  background: $black
+  color: $white
+  text-align: center
+  padding: 1rem 0
+
+  p
+    +bp(md)
+      text-align: left
+
+  p,
+  a
+    color: $gray-5
+
+  ul.footer-social
+    li
+      display: inline-block
+      a
+        display: block
+        padding: 0 1rem
+        &:hover
+          color: $white
+          
+    +bp(md)
+      text-align: right
